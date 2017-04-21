@@ -1,0 +1,5 @@
+package roomAndManager;
+
+class Chair {
+     
+}

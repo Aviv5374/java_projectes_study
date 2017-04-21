@@ -1135,7 +1135,7 @@
 									"_parent": {
 										"$ref": "AAAAAAFbivFIQx5bgj4="
 									},
-									"name": "releaseRoom",
+									"name": "ReleaseRoom",
 									"visibility": "public",
 									"isStatic": false,
 									"isLeaf": false,
@@ -3287,7 +3287,7 @@
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "+releaseRoom(): void",
+											"text": "+ReleaseRoom(): void",
 											"horizontalAlignment": 0,
 											"verticalAlignment": 5,
 											"wordWrap": false
