@@ -1,5 +1,7 @@
 package roomAndManager;
 
+import java.util.Random;
+
 public class RoomManager {
   
 	private static RoomManager instance = null;
@@ -7,8 +9,11 @@ public class RoomManager {
 	
 	private RoomManager() {
 		this.rooms = new Room[5];
+		Random rand = new Random();
 		for (int i = 0; i < rooms.length; i++) {
-			rooms[i]= new Room();
+			int size = rand.nextInt(6)+3;
+			int num = i+1;
+			rooms[i]= new Room(num,size);
 		}
 	}
 	

@@ -11,7 +11,7 @@ public class Room {
 public Room(int number, int size) {
 	super();
 	this.roomNumber = number;
-	this.roomSize = size;
+	setRoomSize(size);
 	this.chairsInRoom = new Chair[getRoomSize()];
 	for(int i=0; i < chairsInRoom.length; i++){
 		chairsInRoom[i] = new Chair(); 
