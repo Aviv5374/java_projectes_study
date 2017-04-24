@@ -2,7 +2,6 @@ INDEX VERSION 1.130+D:\GitHub\java_projectes_study\.metadata\.plugins\org.eclips
 1797742860.index
 1477788888.index
 628019425.index
-1030392544.index
 3620471903.index
 148409970.index
 3666609613.index
