@@ -1,7 +1,7 @@
 package roomAndManager;
 
 public class Room {
-  private enum RoomState{Full,HaifFull,Free};
+  private enum RoomState{Full,HaifFull,Free};//public static?
   private RoomState roomState=RoomState.Free;
   private final int roomNumber;
   private int roomSize;
@@ -9,7 +9,6 @@ public class Room {
   
 
 public Room(int number, int size) {
-	super();
 	this.roomNumber = number;
 	setRoomSize(size);
 	this.chairsInRoom = new Chair[getRoomSize()];
@@ -36,21 +35,28 @@ private void setRoomSize(int size) {
 	else
 		this.roomSize = roomSize;
 }
-//?
-public Chair[] getChairsInRoom() {
-	return chairsInRoom;
-}
-//?
-public void setChairsInRoom(Chair[] chairsInRoom) {
-	this.chairsInRoom = chairsInRoom;
-}
 
 public int getRoomNumber() {
 	return roomNumber;
 }
   
 public boolean CheckForFreeChair(){
+	int countOfTakenChairs = 0;
+	for (int i = 0; i < chairsInRoom.length; i++) {
+		if(chairsInRoom[i].isTaken() == false){
+			chairsInRoom[i].setTaken(true);
+			countOfTakenChairs++;
+			break;
+		}
+		else
+			countOfTakenChairs++;
+	}
 	
+	if(countOfTakenChairs == roomSize){
+		setRoomState(RoomState.Full);	
+	}
+	
+	return true;
 }
 //?
 public Chair GetChairByIndex(){

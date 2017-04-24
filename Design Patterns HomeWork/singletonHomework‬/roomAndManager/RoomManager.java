@@ -2,6 +2,8 @@ package roomAndManager;
 
 import java.util.Random;
 
+import roomAndManager.Room.RoomState;
+
 public class RoomManager {
   
 	private static RoomManager instance = null;
@@ -33,7 +35,9 @@ public class RoomManager {
 	}
 	
 	public Room CheckForFreeRoom(){
-		
+		for (int i = 0; i < rooms.length; i++) {
+			if(rooms[i].getRoomState() ==Room.RoomState.Free)
+		}
 	}
 	
 	public void FreeRoom(){
