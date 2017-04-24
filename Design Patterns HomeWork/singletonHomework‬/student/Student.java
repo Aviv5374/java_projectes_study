@@ -2,6 +2,8 @@ package student;
 
 public class Student {
    private String sudentID;
+   private String studentName;
+   private int sitInRoomNumber;
    
    public Student(String sudentID, String studentName) {
 	super();
@@ -33,6 +35,12 @@ public void setSitInRoomNumber(int sitInRoomNumber) {
 	this.sitInRoomNumber = sitInRoomNumber;
 }
 
-private String studentName;
-   private int sitInRoomNumber;
+public void OrderRoom(){
+	
+}
+
+public void ReleaseRoom(){
+	
+}
+
 }

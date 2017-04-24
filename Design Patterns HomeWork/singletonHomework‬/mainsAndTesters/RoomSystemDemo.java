@@ -1,9 +1,11 @@
 package mainsAndTesters;
 
+import student.Student;
+
 public class RoomSystemDemo {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		Student[] students = new Student[10];
 
 	}
 
