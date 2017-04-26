@@ -22,7 +22,7 @@ public class Room {
 		}
 	}
 
-	public RoomState getRoomState() {
+	RoomState getRoomState() {
 		return roomState;
 	}
 
@@ -30,7 +30,7 @@ public class Room {
 		this.roomState = state;
 	}
 
-	public int getRoomSize() {
+	int getRoomSize() {
 		return roomSize;
 	}
 
@@ -56,30 +56,25 @@ public class Room {
 			this.countOfTakenChairs = newCountOfTakenChairs;
 	}
 
-	public void CheckForFreeChair() {
-		int countOfTakenChairs = 0;
+	void CheckForFreeChair() {
 		for (int i = 0; i < chairsInRoom.length; i++) {
 			if (chairsInRoom[i].isTaken() == false) {
 				chairsInRoom[i].setTaken(true);
-				countOfTakenChairs++;
+				setCountOfTakenChairs(getCountOfTakenChairs() + 1);
 				break;
-			} else
-				countOfTakenChairs++;
+			}
 		}
-
-		if (countOfTakenChairs == roomSize) {
+		if (getCountOfTakenChairs() == roomSize)
 			setRoomState(RoomState.Full);
-		}
-
 	}
 
-	public void FreeTakenCheir() {
+	void FreeTakenCheir() {
 		if (getCountOfTakenChairs() <= 0) {
 			System.out.println("there aren't chairs that need to be free");
 			System.out.println("try again later");
 			return;
 		}
-		
+
 		Random rand = new Random();
 		chairsInRoom[rand.nextInt(getCountOfTakenChairs())].setTaken(false);
 		setCountOfTakenChairs(getCountOfTakenChairs() - 1);

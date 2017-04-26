@@ -2,11 +2,13 @@ package mainsAndTesters;
 
 import java.util.Random;
 
+import roomAndManager.RoomManager;
 import student.Student;
 
 public class RoomSystemDemo {
 
 	public static void main(String[] args) {
+		RoomManager roomManagerInsctans = RoomManager.getInstance();
 		Random rand = new Random();
 		Student[] students = new Student[10];
 		students[0]= new Student("aaaaa", "Aviv");
@@ -16,10 +18,20 @@ public class RoomSystemDemo {
 		students[4]= new Student("eeeee", "Moshe");
 		students[5]= new Student("fffff", "Baroch");
 		
-		for (int i = 0; i < 6; i++) {
-			int randomIndex = rand.nextInt(6);
-			
-		}
+		students[0].OrderRoom();
+		students[2].OrderRoom();
+		students[5].OrderRoom();
+		roomManagerInsctans.StateOfTheRooms();
+		
+		students[3].OrderRoom();
+		students[0].ReleaseRoom();
+		students[4].OrderRoom();
+		roomManagerInsctans.StateOfTheRooms();
+		
+		students[0].OrderRoom();
+		students[2].ReleaseRoom();
+		students[1].OrderRoom();
+		roomManagerInsctans.StateOfTheRooms();
 
 	}
 
