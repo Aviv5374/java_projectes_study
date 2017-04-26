@@ -1,5 +1,7 @@
 package roomAndManager;
 
+import java.util.Random;
+
 public class Room {
 	static enum RoomState {
 		Full, HaifFull, Free
@@ -60,5 +62,19 @@ public class Room {
 		return true;
 	}
 
+	public void FreeTakenCheir() {
+		Random rand = new Random();
+		int countOfTakenChairs = 0;
+		for (int i = 0; i < chairsInRoom.length; i++) {
+			if (chairsInRoom[i].isTaken() == true) {
+				countOfTakenChairs++;
+			}
+
+			chairsInRoom[rand.nextInt(countOfTakenChairs)].setTaken(false);
+
+			if (getRoomState() == RoomState.Full)
+				setRoomState(RoomState.Free);
+		}
+	}
 
 }

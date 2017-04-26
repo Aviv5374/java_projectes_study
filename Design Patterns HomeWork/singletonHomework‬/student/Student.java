@@ -1,9 +1,12 @@
 package student;
 
+import roomAndManager.RoomManager;
+
 public class Student {
    private String sudentID;
    private String studentName;
    private int sitInRoomNumber;
+   private RoomManager roomManagerInsctans = RoomManager.getInstance();
    
    public Student(String sudentID, String studentName) {
 	super();
@@ -36,7 +39,7 @@ public void setSitInRoomNumber(int sitInRoomNumber) {
 }
 
 public void OrderRoom(){
-	
+	setSitInRoomNumber(roomManagerInsctans.CheckForFreeRoom());
 }
 
 public void ReleaseRoom(){

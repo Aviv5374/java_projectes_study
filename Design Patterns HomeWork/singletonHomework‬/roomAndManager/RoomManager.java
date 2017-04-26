@@ -5,48 +5,50 @@ import java.util.Random;
 import roomAndManager.Room.RoomState;
 
 public class RoomManager {
-  
+
 	private static RoomManager instance = null;
 	private Room[] rooms;
-	
+
 	private RoomManager() {
-		this.rooms = new Room[5];
 		Random rand = new Random();
+		this.rooms = new Room[5];
 		for (int i = 0; i < rooms.length; i++) {
-			int size = rand.nextInt(6)+3;
-			int num = i+1;
-			rooms[i]= new Room(num,size);
+			int size = rand.nextInt(6) + 3;
+			int num = i + 1;
+			rooms[i] = new Room(num, size);
 		}
 	}
-	
+
 	public static RoomManager getInstance() {
-		if(instance=null)
+		if (instance == null)
 			return instance = new RoomManager();
 		else
-		return instance;
+			return instance;
 	}
+
 	//?
-	public Room[] getRooms() {
-		return rooms;
+	public Room GetRoomByNumber(int roomNumber) {
+
 	}
-	
-	public Room GetRoomByNumber(int roomNumber){
-		
-	}
-	
-	public Room CheckForFreeRoom(){
+
+	public int CheckForFreeRoom() {
 		for (int i = 0; i < rooms.length; i++) {
-			if(rooms[i].getRoomState() == Room.RoomState.Free){
+			if (rooms[i].getRoomState() == Room.RoomState.Free) {
 				rooms[i].CheckForFreeChair();
+				return rooms[i].getRoomNumber();
 			}
 		}
+		System.out.println("There aren't free room in this moment.");
+		System.out.println("try later");
+		return 0;
 	}
-	
-	public void FreeRoom(){
-		
+
+	public void FreeRoom(int roomNumber) {
+		rooms[roomNumber-1].FreeTakenCheir();
+
 	}
-	
-	public void StateOfTheRooms(){
-		
+
+	public void StateOfTheRooms() {
+
 	}
 }
