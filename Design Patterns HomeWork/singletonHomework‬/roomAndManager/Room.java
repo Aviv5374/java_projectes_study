@@ -44,7 +44,7 @@ public class Room {
 		return roomNumber;
 	}
 
-	public boolean CheckForFreeChair() {
+	public void CheckForFreeChair() {
 		int countOfTakenChairs = 0;
 		for (int i = 0; i < chairsInRoom.length; i++) {
 			if (chairsInRoom[i].isTaken() == false) {
@@ -59,7 +59,6 @@ public class Room {
 			setRoomState(RoomState.Full);
 		}
 
-		return true;
 	}
 
 	public void FreeTakenCheir() {
