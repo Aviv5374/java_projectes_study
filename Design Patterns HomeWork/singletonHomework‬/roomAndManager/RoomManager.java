@@ -47,11 +47,12 @@ public class RoomManager {
 	public void StateOfTheRooms() {
 		String[] stateOfRoom = new String[numberOfRooms];
 		for (int i = 0; i < rooms.length; i++) {
-			stateOfRoom[i]= "Room number"+ rooms[i].getRoomNumber()+"is"+rooms[i].getRoomState()+"and the number of chair taken is"+rooms[i].getCountOfTakenChairs();	
+			stateOfRoom[i]= "Room number"+ rooms[i].getRoomNumber()+" is "+rooms[i].getRoomState()+" and the number of chair taken is "+rooms[i].getCountOfTakenChairs();	
 		}
 		for (String string : stateOfRoom) {
 			System.out.println(string);
 		}
+		System.out.println("");
 
 	}
 }
