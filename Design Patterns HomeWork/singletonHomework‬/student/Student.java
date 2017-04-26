@@ -8,7 +8,7 @@ public class Student {
    private int sitInRoomNumber = 0;
    private RoomManager roomManagerInsctans = RoomManager.getInstance();
    
-   public Student(String id, String name)throws Exception {
+   public Student(String id, String name){//throws Exception {
 	this.sudentID = id;
 	this.studentName = name;
 }
