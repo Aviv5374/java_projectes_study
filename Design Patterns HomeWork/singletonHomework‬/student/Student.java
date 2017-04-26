@@ -43,7 +43,8 @@ public void OrderRoom(){
 }
 
 public void ReleaseRoom(){
-	
+	roomManagerInsctans.FreeRoom(getSitInRoomNumber());
+	setSitInRoomNumber(0);
 }
 
 }

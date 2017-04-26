@@ -8,10 +8,11 @@ public class RoomManager {
 
 	private static RoomManager instance = null;
 	private Room[] rooms;
+	private final int numberOfRooms=5;
 
 	private RoomManager() {
 		Random rand = new Random();
-		this.rooms = new Room[5];
+		this.rooms = new Room[numberOfRooms];
 		for (int i = 0; i < rooms.length; i++) {
 			int size = rand.nextInt(6) + 3;
 			int num = i + 1;
@@ -24,11 +25,6 @@ public class RoomManager {
 			return instance = new RoomManager();
 		else
 			return instance;
-	}
-
-	//?
-	public Room GetRoomByNumber(int roomNumber) {
-
 	}
 
 	public int CheckForFreeRoom() {
@@ -49,6 +45,13 @@ public class RoomManager {
 	}
 
 	public void StateOfTheRooms() {
+		String[] stateOfRoom = new String[numberOfRooms];
+		for (int i = 0; i < rooms.length; i++) {
+			stateOfRoom[i]= "Room number"+ rooms[i].getRoomNumber()+"is"+rooms[i].getRoomState();	
+		}
+		for (String string : stateOfRoom) {
+			System.out.println(string);
+		}
 
 	}
 }
