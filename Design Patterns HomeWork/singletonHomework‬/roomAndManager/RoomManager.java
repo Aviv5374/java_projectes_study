@@ -36,7 +36,9 @@ public class RoomManager {
 	
 	public Room CheckForFreeRoom(){
 		for (int i = 0; i < rooms.length; i++) {
-			if(rooms[i].getRoomState() ==Room.RoomState.Free)
+			if(rooms[i].getRoomState() == Room.RoomState.Free){
+				rooms[i].CheckForFreeChair();
+			}
 		}
 	}
 	
