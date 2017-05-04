@@ -53,11 +53,6 @@ public class LeasingCar {
 			return new LeasingCar(this); 
 		}
 		
-		public Builder id(int id) {
-			this.id=id;
-			return this;
-		}
-		
 		public Builder yearOfManufacture(Date yearOfManufacture) {
 			this.yearOfManufacture=yearOfManufacture;
 			return this;
@@ -77,6 +72,14 @@ public class LeasingCar {
 			this.price=price;
 			return this;
 		}		
+	}
+	
+	public static int getCurrentId() {
+		return currentId;
+	}
+
+	public static void setCurrentId(int currentId) {
+		LeasingCar.currentId = currentId;
 	}
 	
 	public long getId() {
@@ -141,6 +144,8 @@ public class LeasingCar {
 				+ ", yearOfManufacture=" + yearOfManufacture + ", color=" + color + ", levelOfEquipment="
 				+ levelOfEquipment + ", price=" + price + "]";
 	}
+
+	
 
 	
 
