@@ -15,7 +15,7 @@ public class LeasingCar {
 	// optional fields
 	private Date yearOfManufacture;
 	private Color color;
-	private static enum LevelOfEquipment {BASIC, MEDIUM, COMFORT} ;//?
+	public static enum LevelOfEquipment {BASIC, MEDIUM, COMFORT} ;
 	private LevelOfEquipment levelOfEquipment;
 	private double price;
 	
@@ -39,7 +39,6 @@ public class LeasingCar {
 		// optional fields
 		private Date yearOfManufacture;
 		private Color color;
-		public static enum LevelOfEquipment {BASIC, MEDIUM, COMFORT} ;
 		private LevelOfEquipment levelOfEquipment;
 		private double price;
 	
@@ -77,13 +76,72 @@ public class LeasingCar {
 		public Builder price(double price) {
 			this.price=price;
 			return this;
-		}
-	
+		}		
 	}
 	
-	
-	
-	
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
+
+	public String getLicenseNumber() {
+		return licenseNumber;
+	}
+
+	public void setLicenseNumber(String licenseNumber) {
+		this.licenseNumber = licenseNumber;
+	}
+
+	public String getCompanyName() {
+		return companyName;
+	}
+
+	public void setCompanyName(String companyName) {
+		this.companyName = companyName;
+	}
+
+	public Date getYearOfManufacture() {
+		return yearOfManufacture;
+	}
+
+	public void setYearOfManufacture(Date yearOfManufacture) {
+		this.yearOfManufacture = yearOfManufacture;
+	}
+
+	public Color getColor() {
+		return color;
+	}
+
+	public void setColor(Color color) {
+		this.color = color;
+	}
+
+	public LevelOfEquipment getLevelOfEquipment() {
+		return levelOfEquipment;
+	}
+
+	public void setLevelOfEquipment(LevelOfEquipment levelOfEquipment) {
+		this.levelOfEquipment = levelOfEquipment;
+	}
+
+	public double getPrice() {
+		return price;
+	}
+
+	public void setPrice(double price) {
+		this.price = price;
+	}
+
+	@Override
+	public String toString() {
+		return "LeasingCar [id=" + id + ", licenseNumber=" + licenseNumber + ", companyName=" + companyName
+				+ ", yearOfManufacture=" + yearOfManufacture + ", color=" + color + ", levelOfEquipment="
+				+ levelOfEquipment + ", price=" + price + "]";
+	}
+
 	
 
 }
