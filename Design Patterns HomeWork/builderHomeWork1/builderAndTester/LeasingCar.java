@@ -42,13 +42,21 @@ public class LeasingCar {
 		private static enum LevelOfEquipment {BASIC, MEDIUM, COMFORT} ;
 		private LevelOfEquipment levelOfEquipment;
 		private double price;
+	
+		public Builder (String companyName, String licenseNumber)
+		{
+			this.companyName =companyName;
+			this.licenseNumber =licenseNumber;
+			this.id = ++currentId;			
+		}
+	
+	
+	
 	}
 	
-	public Builder (String companyName, String licenseNumber)
-	{
-		this.companyName =companyName;
-		this.licenseNumber =licenseNumber;
-		this.id = ++currentId;			
-	}
+	
+	
+	
+	
 
 }
