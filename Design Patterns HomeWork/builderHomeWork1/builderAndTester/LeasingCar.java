@@ -5,11 +5,10 @@ import java.sql.Date;
 
 import javax.xml.crypto.Data;
 
-import builderExample.User.Builder;
 
 public class LeasingCar {
 	private static int currentId = 0;
-	
+	private long id;
 	// requiered fields
 	private String licenseNumber;
 	private String companyName;
@@ -22,6 +21,7 @@ public class LeasingCar {
 	
 	private LeasingCar(Builder builder) {
 		super();
+		this.id = builder.id;
 		this.licenseNumber = builder.licenseNumber;
 		this.companyName = builder.companyName;
 		this.yearOfManufacture = builder.yearOfManufacture;
@@ -31,6 +31,8 @@ public class LeasingCar {
 	}
 	
 	public static class Builder{
+		private long id;
+		
 		// requiered fields
 		private String licenseNumber;
 		private String companyName;
@@ -42,5 +44,11 @@ public class LeasingCar {
 		private double price;
 	}
 	
+	public Builder (String companyName, String licenseNumber)
+	{
+		this.companyName =companyName;
+		this.licenseNumber =licenseNumber;
+		this.id = ++currentId;			
+	}
 
 }
