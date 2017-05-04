@@ -15,7 +15,7 @@ public class LeasingCar {
 	// optional fields
 	private Date yearOfManufacture;
 	private Color color;
-	private static enum LevelOfEquipment {BASIC, MEDIUM, COMFORT} ;
+	//private static enum LevelOfEquipment {BASIC, MEDIUM, COMFORT} ;
 	private LevelOfEquipment levelOfEquipment;
 	private double price;
 	
@@ -39,7 +39,7 @@ public class LeasingCar {
 		// optional fields
 		private Date yearOfManufacture;
 		private Color color;
-		private static enum LevelOfEquipment {BASIC, MEDIUM, COMFORT} ;
+		public static enum LevelOfEquipment {BASIC, MEDIUM, COMFORT} ;
 		private LevelOfEquipment levelOfEquipment;
 		private double price;
 	
@@ -49,6 +49,12 @@ public class LeasingCar {
 			this.licenseNumber =licenseNumber;
 			this.id = ++currentId;			
 		}
+		
+		public LeasingCar build(){
+			return new LeasingCar(this); 
+		}
+		
+		p
 	
 	
 	
