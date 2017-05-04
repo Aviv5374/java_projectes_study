@@ -1,8 +1,9 @@
 package coldDrinks;
 
+import mealAndBuilder.Item;
 import packs.Bottle;
-
-public interface ColdDrink {
+//abstrac?
+public class ColdDrink implements Item {
 	
 	protected Bottle bottle;
 

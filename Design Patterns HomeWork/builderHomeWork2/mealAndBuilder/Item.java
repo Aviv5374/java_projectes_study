@@ -1,10 +1,8 @@
 package mealAndBuilder;
 
-import burgers.Burger;
-import coldDrinks.ColdDrink;
 import packs.Packing;
 
-public class Item implements Burger,ColdDrink {
+public interface Item  {
      
 	private String name;
 	private Packing pack;

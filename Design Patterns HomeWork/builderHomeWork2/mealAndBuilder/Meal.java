@@ -6,8 +6,15 @@ public class Meal {
 	
 	private ArrayList<Item> items;
 	
+	private Meal (MealBuilder bilder){
+		
+	}
 	
 	public class MealBuilder{
+		
+		private ArrayList<Item> items;
+		//or
+		private Item item;
 		
 		public Meal prepareVegMeal() {
 			return new Meal(this);

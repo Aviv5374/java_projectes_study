@@ -1,8 +1,10 @@
 package burgers;
 
+import mealAndBuilder.Item;
 import packs.Wrapper;
 
-public interface Burger {
+//abstrac?
+public class Burger implements Item{
 	
    protected Wrapper wrapper;
 
