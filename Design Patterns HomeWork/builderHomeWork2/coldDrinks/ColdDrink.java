@@ -1,5 +1,5 @@
 package coldDrinks;
 
-public class ColdDrink {
+public interface ColdDrink {
 
 }

@@ -1,5 +1,5 @@
 package burgers;
 
-public class Burger {
+public interface Burger {
 
 }

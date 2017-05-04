@@ -1,5 +1,5 @@
 package coldDrinks;
 
-public class Pepsi extends ColdDrink {
+public interface Pepsi extends ColdDrink {
 
 }

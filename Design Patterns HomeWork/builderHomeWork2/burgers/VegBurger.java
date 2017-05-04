@@ -1,5 +1,5 @@
 package burgers;
 
-public class VegBurger extends Burger {
+public interface VegBurger extends Burger {
 
 }
