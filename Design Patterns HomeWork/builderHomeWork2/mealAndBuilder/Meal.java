@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 public class Meal {
 	
-	private ArrayList<Item> items;
+	private ArrayList<Item> items = new ArrayList<Item>();
 	
 	
 	public void addItem(Item item) {
