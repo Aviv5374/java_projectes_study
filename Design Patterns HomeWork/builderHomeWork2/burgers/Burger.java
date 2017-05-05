@@ -3,9 +3,9 @@ package burgers;
 import mealAndBuilder.Item;
 import packs.Wrapper;
 
-//abstrac?
-public class Burger implements Item{
+
+public abstract class Burger implements Item{
 	
-   protected Wrapper wrapper;
+   protected Wrapper wrapper = new Wrapper();
 
 }
