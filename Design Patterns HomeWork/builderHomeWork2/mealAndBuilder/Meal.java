@@ -2,9 +2,14 @@ package mealAndBuilder;
 
 import java.util.ArrayList;
 
+import javax.swing.plaf.synth.SynthOptionPaneUI;
+
 import burgers.Burger;
 import burgers.ChickenBurger;
 import burgers.VegBurger;
+import coldDrinks.Coke;
+import coldDrinks.ColdDrink;
+import coldDrinks.Pepsi;
 
 public class Meal {
 	
@@ -48,6 +53,20 @@ public class Meal {
 			items.add(chickenBurger = new ChickenBurger());
 			return this;			
 		}
+		
+		public Builder coke()
+		{
+			ColdDrink coke;
+			items.add(coke = new Coke());
+			return this;			
+		}
+		
+		public Builder pepsi()
+		{
+			ColdDrink pepsi;
+			items.add(pepsi = new Pepsi());
+			return this;			
+		}
 	}
 	
 	
@@ -57,12 +76,18 @@ public class Meal {
 	}
 	
 	public float getCost() {
-		//?
-		return items[0].prise();
+		float totalPrice=0;
+		for (int i = 0; i < items.size(); i++){
+			totalPrice+=items.get(i).price();
+		}
+			return totalPrice;
+		
 	}
 	
 	public void showItems() {
-		
+		for (int i = 0; i < items.size(); i++){
+			System.out.println(items.get(i).name()); 
+		}
 	}
 
 }
