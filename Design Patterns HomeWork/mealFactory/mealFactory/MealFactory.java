@@ -9,12 +9,12 @@ public class MealFactory {
 
 	public Meal prepareMeal(String mealType) {
 
-		if (mealType == "v" || mealType == "V") {
+		if (mealType.equals("v") || mealType.equals("V")) {
 			Meal meal = new Meal();
 			meal.addItem(new VegBurger());
 			meal.addItem(new Coke());
 			return meal;
-		} else if (mealType == "c" || mealType == "C") {
+		} else if (mealType.equals("c")|| mealType.equals("C")) {
 			Meal meal = new Meal();
 			meal.addItem(new ChickenBurger());
 			meal.addItem(new Pepsi());
