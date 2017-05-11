@@ -5,7 +5,7 @@ import drinks.Pepsi;
 import food.ChickenBurger;
 import food.VegBurger;
 
-public class MealBuilder {
+public class MealFactory {
 
 	   public Meal prepareVegMeal (){
 	      Meal meal = new Meal();

@@ -1,9 +1,9 @@
 package mealFactory;
 
-public class BuilderPatternDemo {
+public class FactoryPatternDemo {
 	   public static void main(String[] args) {
 	   
-	      MealBuilder mealBuilder = new MealBuilder();
+	      MealFactory mealBuilder = new MealFactory();
 
 	      Meal vegMeal = mealBuilder.prepareVegMeal();
 	      System.out.println("Veg Meal");
