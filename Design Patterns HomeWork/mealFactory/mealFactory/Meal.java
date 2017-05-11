@@ -8,7 +8,7 @@ import interfaces.Item;
 public class Meal {
    private List<Item> items = new ArrayList<Item>();	
 
-   public void addItem(Item item){
+   protected void addItem(Item item){
       items.add(item);
    }
 
