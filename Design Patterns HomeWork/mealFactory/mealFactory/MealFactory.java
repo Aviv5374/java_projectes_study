@@ -8,7 +8,7 @@ import food.VegBurger;
 public class MealFactory {
 
 	public Meal prepareMeal(String mealType) {
-		Meal meal = null;
+		//Meal meal = null;
 		if (mealType.equals("v") || mealType.equals("V")) {
 			return new VegMeal();
 		} else if (mealType.equals("c")|| mealType.equals("C")) {
