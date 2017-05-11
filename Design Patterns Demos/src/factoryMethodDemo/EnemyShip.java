@@ -1,3 +1,5 @@
+package factoryMethodDemo;
+
 public abstract class EnemyShip {
 	
 	private String name;

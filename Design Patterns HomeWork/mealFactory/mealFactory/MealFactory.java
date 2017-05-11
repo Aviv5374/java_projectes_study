@@ -7,17 +7,20 @@ import food.VegBurger;
 
 public class MealFactory {
 
-	   public Meal prepareVegMeal (){
-	      Meal meal = new Meal();
-	      meal.addItem(new VegBurger());
-	      meal.addItem(new Coke());
-	      return meal;
-	   }   
+	public Meal prepareMeal(String mealType) {
 
-	   public Meal prepareNonVegMeal (){
-	      Meal meal = new Meal();
-	      meal.addItem(new ChickenBurger());
-	      meal.addItem(new Pepsi());
-	      return meal;
-	   }
+		if (mealType == "v" || mealType == "V") {
+			Meal meal = new Meal();
+			meal.addItem(new VegBurger());
+			meal.addItem(new Coke());
+			return meal;
+		} else if (mealType == "c" || mealType == "C") {
+			Meal meal = new Meal();
+			meal.addItem(new ChickenBurger());
+			meal.addItem(new Pepsi());
+			return meal;
+		} else
+			return null;
 	}
+
+}

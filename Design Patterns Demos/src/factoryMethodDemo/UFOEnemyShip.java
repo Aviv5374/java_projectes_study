@@ -1,3 +1,5 @@
+package factoryMethodDemo;
+
 public class UFOEnemyShip extends EnemyShip {
 	
 	public UFOEnemyShip(){
