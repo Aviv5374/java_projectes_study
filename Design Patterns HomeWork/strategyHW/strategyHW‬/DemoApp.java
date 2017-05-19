@@ -14,6 +14,8 @@ import java.awt.Button;
 public class DemoApp {
 
 	private JFrame frame;
+	private String sumbitNumber="";
+	private String sumbitEmail="";
 
 	/**
 	 * Launch the application.
