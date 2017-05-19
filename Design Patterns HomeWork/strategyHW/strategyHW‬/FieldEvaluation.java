@@ -9,7 +9,11 @@ class NumberFieldEvaluation implements FieldEvaluation{
 
 	@Override
 	public boolean isValid(String submitText) {
-		// TODO Auto-generated method stub
+		for (int i = 0; i < submitText.length(); i++) {
+			if
+		}
+		
+		submitText.charAt(i);
 		return false;
 	}
 	
