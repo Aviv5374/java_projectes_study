@@ -1,11 +1,7 @@
 package mealAndBuilder;
 
-import burgers.Burger;
 import burgers.ChickenBurger;
 import burgers.VegBurger;
-import coldDrinks.Coke;
-import coldDrinks.ColdDrink;
-import coldDrinks.Pepsi;
 
 public class MealBuilder {
  

@@ -3,8 +3,6 @@ package builderAndTester;
 import java.awt.Color;
 import java.sql.Date;
 
-import javax.xml.crypto.Data;
-
 
 public class LeasingCar {
 	private static int currentId = 0;

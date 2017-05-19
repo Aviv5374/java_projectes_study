@@ -2,8 +2,6 @@ package roomAndManager;
 
 import java.util.Random;
 
-import roomAndManager.Room.RoomState;
-
 public class RoomManager {
 
 	private static RoomManager instance = null;

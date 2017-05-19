@@ -2,11 +2,7 @@ package strategyHW‬;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
-import javax.swing.GroupLayout;
-import javax.swing.GroupLayout.Alignment;
-import javax.swing.Box;
 import java.awt.TextField;
-import java.awt.Panel;
 import java.awt.Label;
 import java.awt.Font;
 import java.awt.Button;
@@ -25,6 +21,7 @@ public class DemoApp {
 	 */
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
+			@Override
 			public void run() {
 				try {
 					DemoApp window = new DemoApp();
@@ -74,6 +71,7 @@ public class DemoApp {
 		
 		Button okButton = new Button("OK");
 		okButton.addActionListener(new ActionListener() {
+			@Override
 			public void actionPerformed(ActionEvent arg0) {
 				fieldEvaluator.evaluate(numberTextField.getText(), emailTextField.getText());
 			}
