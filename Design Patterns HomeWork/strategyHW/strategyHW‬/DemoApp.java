@@ -10,12 +10,15 @@ import java.awt.Panel;
 import java.awt.Label;
 import java.awt.Font;
 import java.awt.Button;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class DemoApp {
 
 	private JFrame frame;
 	private String sumbitNumber="";
 	private String sumbitEmail="";
+	private FieldEvaluator fieldEvaluator = new FieldEvaluator();
 
 	/**
 	 * Launch the application.
@@ -70,6 +73,11 @@ public class DemoApp {
 		frame.getContentPane().add(emailTextField);
 		
 		Button okButton = new Button("OK");
+		okButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				fieldEvaluator.evaluate(numberTextField.getText(), emailTextField.getText());
+			}
+		});
 		okButton.setFont(new Font("Dialog", Font.PLAIN, 13));
 		okButton.setBounds(152, 200, 86, 30);
 		frame.getContentPane().add(okButton);

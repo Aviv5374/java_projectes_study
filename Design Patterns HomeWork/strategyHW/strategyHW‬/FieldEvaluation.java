@@ -2,13 +2,13 @@ package strategyHW‬;
 
 
 public interface FieldEvaluation{
-	boolean isValid();
+	boolean isValid(String submitText);
 }
 
 class NumberFieldEvaluation implements FieldEvaluation{
 
 	@Override
-	public boolean isValid() {
+	public boolean isValid(String submitText) {
 		// TODO Auto-generated method stub
 		return false;
 	}
@@ -18,7 +18,7 @@ class NumberFieldEvaluation implements FieldEvaluation{
 class EmailFieldEvaluation implements FieldEvaluation{
 
 	@Override
-	public boolean isValid() {
+	public boolean isValid(String submitText) {
 		// TODO Auto-generated method stub
 		return false;
 	}
