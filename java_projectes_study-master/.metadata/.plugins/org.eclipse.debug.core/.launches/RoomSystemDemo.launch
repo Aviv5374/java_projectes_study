@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
-<listEntry value="/Design Patterns HomeWork/singletonHomework‬/mainsAndTesters/RoomSystemDemo.java"/>
+<listEntry value="/Design Patterns HomeWork/testsAndDemos/testsAndDemos‬/TestsAndDemos‬.java"/>
 </listAttribute>
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
 <listEntry value="1"/>
 </listAttribute>
-<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="mainsAndTesters.RoomSystemDemo"/>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="testsAndDemos‬.TestsAndDemos‬"/>
 <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="Design Patterns HomeWork"/>
 </launchConfiguration>
