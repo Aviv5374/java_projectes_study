@@ -6,6 +6,7 @@
 	<classpathentry kind="src" path="mealFactory"/>
 	<classpathentry kind="src" path="testsAndDemos2"/>
 	<classpathentry kind="src" path="test4"/>
+	<classpathentry kind="src" path="strategyHomeWork"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="output" path="bin"/>
