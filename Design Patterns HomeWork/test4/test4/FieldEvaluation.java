@@ -1,29 +1,36 @@
 package test4;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public interface FieldEvaluation {
 	boolean isValid(String submitText);
 }
 
-class NumberFieldEvaluation implements FieldEvaluation{
+class NumberFieldEvaluation implements FieldEvaluation {
 
 	@Override
 	public boolean isValid(String submitText) {
 		for (int i = 0; i < submitText.length(); i++) {
-			if
+			if (submitText.codePointAt(i) < 48 || submitText.codePointAt(i) > 57)
+				return false;
 		}
-		
-		submitText.charAt(i);
-		return false;
+
+		return true;
 	}
-	
+
 }
 
-class EmailFieldEvaluation implements FieldEvaluation{
+class EmailFieldEvaluation implements FieldEvaluation {
 
 	@Override
 	public boolean isValid(String submitText) {
-		// TODO Auto-generated method stub
-		return false;
+		Pattern pattern = Pattern.compile("[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}+\\.[A-Za-z]{2,4}??");
+		Matcher mat = pattern.matcher(submitText);
+		if (mat.matches())
+			return true;
+		else
+			return false;
 	}
-	
+
 }
