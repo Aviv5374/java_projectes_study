@@ -7,6 +7,7 @@ import java.awt.Label;
 import java.awt.TextField;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.JOptionPane;
 
 import javax.swing.JFrame;
 
@@ -73,8 +74,8 @@ public class DemoApp {
 		okButton.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				fieldEvaluator.evaluate(numberTextField.getText(), emailTextField.getText());
 				
+				JOptionPane.showMessageDialog(null,fieldEvaluator.evaluate(numberTextField.getText(), emailTextField.getText()),"lol",JOptionPane.INFORMATION_MESSAGE);
 			}
 		});
 		okButton.setFont(new Font("Dialog", Font.PLAIN, 13));

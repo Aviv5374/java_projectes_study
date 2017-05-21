@@ -11,15 +11,15 @@ private FieldEvaluation evaluateStrategy;
 		this.evaluateStrategy = newEvaluateStrategy;
 	}
 
-	public boolean evaluate(String submitNumber,String submitEmail) {
+	public String evaluate(String submitNumber,String submitEmail) {
 		try {
 			setEvaluateStrategy(new NumberFieldEvaluation());
 			if(!evaluateStrategy.isValid(submitNumber)) throw new FieldEvaluationException();
 			setEvaluateStrategy(new EmailFieldEvaluation());
 			if(!evaluateStrategy.isValid(submitEmail)) throw new FieldEvaluationException();
-			
+			return "Welcome";
 		} catch (FieldEvaluationException e) {
-			// TODO: handle exception
+			return "One of the parnetrs isn't valid. pleace try again.";
 		}
 		
 	}

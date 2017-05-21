@@ -15,7 +15,6 @@ class NumberFieldEvaluation implements FieldEvaluation {
 			if (submitText.codePointAt(i) < 48 || submitText.codePointAt(i) > 57)
 				return false;
 		}
-
 		return true;
 	}
 
@@ -31,6 +30,7 @@ class EmailFieldEvaluation implements FieldEvaluation {
 			return true;
 		else
 			return false;
+		//return mat.matches();
 	}
 
 }
