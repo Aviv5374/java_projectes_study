@@ -24,13 +24,9 @@ class EmailFieldEvaluation implements FieldEvaluation {
 
 	@Override
 	public boolean isValid(String submitText) {
-		Pattern pattern = Pattern.compile("[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}+\\.[A-Za-z]{2,4}??");
+		Pattern pattern = Pattern.compile("[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}");
 		Matcher mat = pattern.matcher(submitText);
-		if (mat.matches())
-			return true;
-		else
-			return false;
-		//return mat.matches();
+		return mat.matches();
 	}
 
 }
