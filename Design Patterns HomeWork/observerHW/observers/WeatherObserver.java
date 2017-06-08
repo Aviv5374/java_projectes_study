@@ -33,7 +33,7 @@ public class WeatherObserver implements Observer {
 	}
 
 	public void printConclusion() {
-		if (waterTemperature <= 5 && windSpeed <= 5 && waveHeigth <= 5) {
+		if (waterTemperature <= 5 && windSpeed <= 7 && waveHeigth <= 3) {
 			System.out.println("Time to go to the beach");
 			System.out.println("Life is a beach");
 		} else {

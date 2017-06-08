@@ -1,5 +1,7 @@
 package mainAndTheads;
 
+import java.util.Random;
+
 import subjects.WeatherPublisher;
 
 public class WeatherThead implements Runnable {
@@ -20,8 +22,10 @@ public class WeatherThead implements Runnable {
 				Thread.sleep(startTime * 1000);
 			} catch (InterruptedException e) {
 			}
-
-			int randNum = (int) Math.random() + 11;
+            
+			Random r = new Random();
+		
+			int randNum = r.nextInt(11);
 
 			if (nameOfPrameter == "waterTemperature")
 				WeatherPublisher.getInstance().setWaterTemperature(randNum);
