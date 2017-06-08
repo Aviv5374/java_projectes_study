@@ -1,12 +1,13 @@
 package subjects;
 
 import java.awt.List;
+import java.util.ArrayList;
 
 import observers.Observer;
 
 public class WeatherPublisher implements Subject {
     
-	private List<Observer> observers;
+	private ArrayList<Observer> observers;
 	private int waterTemperature;
 	private int windSpeed;
 	private int waveHeigth;
@@ -16,13 +17,13 @@ public class WeatherPublisher implements Subject {
 	}
 
 	@Override
-	public void register(Observer o) {
+	public void register(Observer newObserver) {
 		observers.add(newObserver);
 		
 	}
 
 	@Override
-	public void unregister(Observer o) {
+	public void unregister(Observer deleteObserver) {
 		// Get the index of the observer to delete
 		
 				int observerIndex = observers.indexOf(deleteObserver);
@@ -44,7 +45,7 @@ public class WeatherPublisher implements Subject {
 				
 				for(Observer observer : observers){
 					
-					observer.update();
+					observer.update(waterTemperature, windSpeed, waveHeigth);
 		
 	}
 }
@@ -63,3 +64,4 @@ public class WeatherPublisher implements Subject {
 		this.waveHeigth = waveHeigth;
 		notifyObserver();
 	}
+}

@@ -1,5 +1,7 @@
 package observers;
 
+import subjects.Subject;
+
 public class WeatherObserver implements Observer {
      
 	private int waterTemperature;
@@ -33,7 +35,13 @@ public class WeatherObserver implements Observer {
 	}
 	
 	public void printConclusion(){
-		if(<=5){ print(true)}
-		else{print(false)}
+		if(waterTemperature<=5 || windSpeed<=5 || waveHeigth<=5){ 
+			System.out.println("Time to go to the beach");
+			System.out.println("Life is a beach");
+			}
+		else{
+			System.out.println("Don't to the beach");
+			System.out.println("Life is a beach");
+			}
 	}
 }
