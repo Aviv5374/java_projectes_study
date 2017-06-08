@@ -9,9 +9,9 @@ public class WetherTest {
 		
 		WeatherObserver weatherObserver1 = new WeatherObserver();
 		
-		WeatherPublisher.getInstance().setWaterTemperature(3);
-		WeatherPublisher.getInstance().setWaveHeigth(3);
-		WeatherPublisher.getInstance().setWindSpeed(3);
+		
+		
+		
 
 	}
 

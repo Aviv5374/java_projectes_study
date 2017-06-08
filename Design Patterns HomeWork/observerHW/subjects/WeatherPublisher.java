@@ -9,9 +9,9 @@ public class WeatherPublisher implements Subject {
 	private static WeatherPublisher instance = null;
 	
 	private ArrayList<Observer> observers;
-	private int waterTemperature = 6;
-	private int windSpeed = 6;
-	private int waveHeigth = 6;
+	private int waterTemperature;
+	private int windSpeed;
+	private int waveHeigth;
 
 	private WeatherPublisher() {
 		observers = new ArrayList<Observer>();
