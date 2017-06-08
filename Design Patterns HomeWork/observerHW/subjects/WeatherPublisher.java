@@ -1,54 +1,48 @@
 package subjects;
 
-import java.awt.List;
 import java.util.ArrayList;
 
 import observers.Observer;
 
 public class WeatherPublisher implements Subject {
-    
-	private ArrayList<Observer> observers;
-	private int waterTemperature;
-	private int windSpeed;
-	private int waveHeigth;
+
+	private static WeatherPublisher instance = null;
 	
-	public WeatherPublisher(){
+	private ArrayList<Observer> observers;
+	private int waterTemperature = 6;
+	private int windSpeed = 6;
+	private int waveHeigth = 6;
+
+	private WeatherPublisher() {
 		observers = new ArrayList<Observer>();
+	}
+	
+	public static WeatherPublisher getInstance() {
+		if (instance == null)
+			return instance = new WeatherPublisher();
+		else
+			return instance;
 	}
 
 	@Override
 	public void register(Observer newObserver) {
 		observers.add(newObserver);
-		
+
 	}
 
 	@Override
 	public void unregister(Observer deleteObserver) {
-		// Get the index of the observer to delete
-		
-				int observerIndex = observers.indexOf(deleteObserver);
-				
-				// Print out message (Have to increment index to match)
-				
-				System.out.println("Observer " + (observerIndex+1) + " deleted");
-				
-				// Removes observer from the ArrayList
-				
-				observers.remove(observerIndex);
-		
+		int observerIndex = observers.indexOf(deleteObserver);
+		System.out.println("Observer " + (observerIndex + 1) + " deleted");
+		observers.remove(observerIndex);
 	}
 
 	@Override
 	public void notifyObserver() {
-		// Cycle through all observers and notifies them of
-				// price changes
-				
-				for(Observer observer : observers){
-					
-					observer.update(waterTemperature, windSpeed, waveHeigth);
-		
+		for (Observer observer : observers) {
+			observer.update(waterTemperature, windSpeed, waveHeigth);
+		}
 	}
-}
 
 	public void setWaterTemperature(int waterTemperature) {
 		this.waterTemperature = waterTemperature;

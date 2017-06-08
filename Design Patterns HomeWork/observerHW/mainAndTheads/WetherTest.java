@@ -7,9 +7,11 @@ public class WetherTest {
 
 	public static void main(String[] args) {
 		
-		WeatherPublisher weatherPublisher = new WeatherPublisher();
+		WeatherObserver weatherObserver1 = new WeatherObserver();
 		
-		WeatherObserver weatherObserver1 = new WeatherObserver(weatherPublisher);
+		WeatherPublisher.getInstance().setWaterTemperature(3);
+		WeatherPublisher.getInstance().setWaveHeigth(3);
+		WeatherPublisher.getInstance().setWindSpeed(3);
 
 	}
 
