@@ -1,7 +1,6 @@
 package mainAndTheads;
 
 import observers.WeatherObserver;
-import subjects.WeatherPublisher;
 
 public class WetherTest {
 
@@ -9,6 +8,13 @@ public class WetherTest {
 		
 		WeatherObserver weatherObserver1 = new WeatherObserver();
 		
+		Runnable waterTemperatureThread = new WeatherThead(2,"waterTemperature");
+		Runnable windSpeedThread = new WeatherThead(1,"windSpeed");
+		Runnable waveHeigthThread = new WeatherThead(3,"waveHeigth");
+		
+		new Thread(waterTemperatureThread).start();
+		new Thread(windSpeedThread).start();
+		new Thread(waveHeigthThread).start();
 		
 		
 		
